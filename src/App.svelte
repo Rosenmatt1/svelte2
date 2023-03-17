@@ -21,7 +21,7 @@
 </script>
 
 <!-- if passing a prop that is named the same, don't need to name it -->
-<main>
+<main class="container">
 	<FeedbackList {feedback}/>
 </main>
 
