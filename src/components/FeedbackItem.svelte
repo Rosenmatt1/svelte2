@@ -1,15 +1,18 @@
 <script>
-  import Card from './Card.svelte'
-  export let item
+  import Card from "./Card.svelte";
+  export let item;
 
+  const handleDelete = (itemId) => {
+    console.log(itemId);
+  };
 </script>
 
 <Card>
   <div class="num-display">
     {item.rating}
   </div>
-  <div  class="close"> X </div>
-  <p class="text-display"> {item.text} </p>
+  <button on:click={() => handleDelete(item.id)} class="close"> X </button>
+  <p class="text-display">{item.text}</p>
 </Card>
 
 <style>
@@ -27,12 +30,13 @@
     text-align: center;
     font-size: 19px;
   }
-  
+
   .close {
     position: absolute;
     top: 10px;
     right: 20px;
     cursor: pointer;
+    background: none;
+    border: none;
   }
 </style>
-
