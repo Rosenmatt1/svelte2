@@ -1,5 +1,3 @@
-
-
 <script>
   import {createEventDispatcher} from 'svelte'
   let selected = 10
