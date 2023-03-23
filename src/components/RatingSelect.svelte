@@ -40,7 +40,7 @@
   <li>
     <input type="radio" id="num8" name="rating" value="8" on:change={onChange} checked={selected===8} />
     <label for="num8">8</label>
-  </li>
+</li>
   <li>
     <input type="radio" id="num9" name="rating" value="9" on:change={onChange} checked={selected===9} />
     <label for="num9">9</label>
@@ -57,6 +57,7 @@
     align-items: center;
     justify-content: space-around;
     margin: 30px 0;
+    z-index: 0;
   }
   .rating li {
     position: relative;
@@ -69,6 +70,7 @@
     font-size: 19px;
     border: 1px #eee solid;
     transition: 0.3s;
+    z-index: 1;
   }
   .rating li label {
     position: absolute;
@@ -80,14 +82,17 @@
     border-radius: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    z-index: 1;
   }
   .rating li:hover {
     background: #ff6a95;
     color: #fff;
+    z-index: 1;
   }
   /* Make actual radio select invisible */
   [type='radio'] {
     opacity: 0;
+    z-index: 1;
   }
   /* Use the sibling select */
   [type='radio']:checked ~ label {
