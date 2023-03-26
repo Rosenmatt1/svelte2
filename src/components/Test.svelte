@@ -11,5 +11,5 @@
 <button on:click={toggleVisibility}>Toggle Visibility</button>
 
 {#if isVisible}
-  <div transition:fade={{ duration: 500, delay: 100, opacity: 0.5 }}>Hello, world!</div>
+  <div transition:fade={{ duration: 500, delay: 1000, opacity: 0.5 }}>Hello, world!</div>
 {/if}
